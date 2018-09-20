@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55bcb8c0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timer"
+        style="@style/roundBg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="30 s"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/score"
+        style="@style/roundBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:text="0/0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ques"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/timer"
+        app:layout_constraintEnd_toStartOf="@+id/score"
+        app:layout_constraintStart_toEndOf="@+id/timer"
+        android:text="3 + 5" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer">
+
+        <TextView
+            android:id="@+id/option0"
+            style="@style/options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color1"
+            android:text="45"
+            android:tag="0"/>
+
+        <TextView
+            android:id="@+id/option1"
+            style="@style/options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:background="@color/color2"
+            android:text="6"
+            android:tag="1"/>
+
+        <TextView
+            android:id="@+id/option2"
+            style="@style/options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:background="@color/color2"
+            android:tag="2"
+            android:text="8" />
+
+        <TextView
+            android:id="@+id/option3"
+            style="@style/options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:background="@color/color1"
+            android:text="67"
+            android:tag="3" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:visibility="visible"
+        android:text="your score : 23/237"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <Button
+        android:id="@+id/playAgain"
+        style="@style/button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+</android.support.constraint.ConstraintLayout>
