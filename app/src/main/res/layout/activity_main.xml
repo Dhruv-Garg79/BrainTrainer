@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
-        android:text="30 s"
+        tools:text="30 s"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="24dp"
-        android:text="0/0"
+        tools:text="0/0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,7 +38,7 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/timer"
         app:layout_constraintEnd_toStartOf="@+id/score"
         app:layout_constraintStart_toEndOf="@+id/timer"
-        android:text="3 + 5" />
+        tools:text="3 + 5" />
 
     <GridLayout
         android:id="@+id/gridLayout"
